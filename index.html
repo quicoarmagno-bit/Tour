@@ -1,0 +1,43 @@
+<!-- CÓDIGO PARA REEMPLAZAR EN index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor 360</title>
+    <!-- Asegúrate de que el nombre de tu archivo CSS sea correcto -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos básicos para el botón de permisos */
+        #permission-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Este es el botón que pedirá permiso para usar el giroscopio -->
+    <button id="permission-button">Activar Giroscopio</button>
+
+    <!-- Aquí es donde probablemente se carga tu visor 360.
+         Si tu visor usa un ID diferente, puedes cambiar "viewer-container". -->
+    <div id="viewer-container"></div>
+
+    <!-- Scripts (asegúrate que los nombres de archivo sean correctos) -->
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
