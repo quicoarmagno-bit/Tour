@@ -1,0 +1,22 @@
+<!-- CÓDIGO FINAL Y CORRECTO PARA index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Primero creamos los elementos HTML -->
+<div id="pano"></div>
+<button id="permission-button">Activar Giroscopio</button>
+
+<!-- Y SOLO AL FINAL, cargamos los scripts. ESTE ERA EL ERROR. -->
+<script src="vendor/marzipano.js"></script>
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
