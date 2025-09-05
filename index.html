@@ -1,43 +1,47 @@
-<!-- CÓDIGO PARA REEMPLAZAR EN index.html -->
+<!-- CÓDIGO FINAL PARA index.html -->
 
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visor 360</title>
-    <!-- Asegúrate de que el nombre de tu archivo CSS sea correcto -->
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Estilos básicos para el botón de permisos */
-        #permission-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 9999;
-        }
-    </style>
+<title>Tour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+<link rel="stylesheet" href="style.css">
+<style>
+    #permission-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px 30px;
+        font-size: 18px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+</style>
 </head>
 <body>
 
-    <!-- Este es el botón que pedirá permiso para usar el giroscopio -->
-    <button id="permission-button">Activar Giroscopio</button>
+<!-- El div donde se dibujará el visor. El ID ahora es "pano" -->
+<div id="pano"></div>
 
-    <!-- Aquí es donde probablemente se carga tu visor 360.
-         Si tu visor usa un ID diferente, puedes cambiar "viewer-container". -->
-    <div id="panoElement"></div>
+<button id="permission-button">Activar Giroscopio</button>
 
-    <!-- Scripts (asegúrate que los nombres de archivo sean correctos) -->
-    <script src="data.js"></script>
-    <script src="index.js"></script>
+<!-- Cargamos primero la librería Marzipano y los datos -->
+<script src="vendor/es5-shim.js"></script>
+<script src="vendor/eventShim.js"></script>
+<script src="vendor/classList.js"></script>
+<script src="vendor/requestAnimationFrame.js"></script>
+<script src="vendor/screenfull.min.js"></script>
+<script src="vendor/bowser.min.js"></script>
+<script src="vendor/marzipano.js"></script>
+<script src="data.js"></script>
+
+<!-- Y al final, nuestro script principal -->
+<script src="index.js"></script>
 
 </body>
 </html>
